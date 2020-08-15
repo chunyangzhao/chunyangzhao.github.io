@@ -58,13 +58,13 @@ $ sudo npm install -g hexo-cli
 
 ## 常用命令
 
-##### 初始化博客
+### 初始化博客
 
 ```bash
 $ hexo init [博客文件夹名]
 ```
 
-##### 新建博客
+### 新建博客
 
 ```bash
 $ hexo new "博客名"
@@ -73,7 +73,7 @@ $ hexo n "博客名"  //简写
 
    More info: [Writing](https://hexo.io/docs/writing.html)
 
-##### 生成静态文件
+### 生成静态文件
 
 ```bash
 $ hexo generate
@@ -82,7 +82,7 @@ $ hexo g //简写
 
 More info: [Generating](https://hexo.io/docs/generating.html)
 
-##### 启动服务预览
+### 启动服务预览
 
 ```bash
 $ hexo server
@@ -91,7 +91,9 @@ $ hexo s //简写
 
 浏览器输入[http://localhost:4000](http://localhost:4000/)  ，即可预览博客页面
 
-##### 部署博客到github上
+More info: [Server](https://hexo.io/docs/server.html)
+
+### 部署博客到github上
 
 ```bash
 $ hexo deploy
@@ -100,25 +102,17 @@ $ hexo d //简写
 
 More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
 
-##### 清除缓存
+### 清除缓存
 
 ```bash
 $ hexo clean
 ```
 
-##### Run server
-
-``` bash
-$ hexo server
-```
-
-More info: [Server](https://hexo.io/docs/server.html)
-
 ## Hexo部署目录本地同步
 
 ### 将hexo目录从本地更新到github
 
-#### 未上传到github过
+**未上传到github过**
 
 1. 先执行hexo deploy，将网页静态文件部署到github上去
 
@@ -143,7 +137,7 @@ More info: [Server](https://hexo.io/docs/server.html)
    $ git push origin hexo
    ```
 
-#### 上传到github过
+**上传到github过**
 
 ```bash
 $ hexo clean
@@ -157,7 +151,7 @@ hexo clean后，目录内发生改变的只有你修改的博客文件，将其�
 
 ### 将hexo目录从github更新到本地
 
-#### 未下载hexo目录
+**未下载hexo目录**
 
 1. 先下载hexo部署文件，进入chunyangzhao目录
 
@@ -183,7 +177,7 @@ hexo clean后，目录内发生改变的只有你修改的博客文件，将其�
 
 4. 之后可进行正常hexo操作，编写、部署博客
 
-#### 已下载hexo目录
+**已下载hexo目录**
 
 先切换到hexo分支，然后
 
