@@ -5,56 +5,62 @@ Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [docume
 
 ## 搭建步骤
 
-1. **GitHub创建个人仓库**
+**GitHub创建个人仓库**
 
-   仓库名应该为：用户名.github.io
+仓库名应该为：用户名.github.io
 
-2. **安装Git**
+**安装Git**
 
-   安装完git后，设置user.name和user.email配置信息，设置github与本地计算机的ssh密钥连接。
+安装完git后，设置user.name和user.email配置信息，设置github与本地计算机的ssh密钥连接。
 
-   ssh设置完成后可通过如下命令验证是否设置成功
+ssh设置完成后可通过如下命令验证是否设置成功
 
-   ```bash
-   $ ssh git@github.com
-   ```
-
-3. **安装Node.js**
-
-   可直接在官网下载Node.js进行安装，官网网址https://nodejs.org/en/
-
-   注意安装Node.js会包含环境变量以及npm的安装，安装后输入如下指令检测是否安装成功
-
-   ```bash
-   $ node -v
-   ```
-
-   ```bash
-   $ npm -v
-   ```
-
-4. **安装Hexo**
-
-   使用npm命令安装Hexo
-
-   ```bash
-   $ npm install -g hexo-cli
-   ```
-
-   如果安装时间过长，可能是由于镜像在国外的原因，可以先切换淘宝镜像，然后再执行npm安装Hexo命令
-
-   ```bash
-   $ npm config set registry http://registry.npm.taobao.org
-   $ npm install -g hexo-cli
-   ```
+```bash
+$ ssh git@github.com
 ```
-   
+
+**安装Node.js**
+
+可直接在[官网](https://nodejs.org/en/)下载Node.js进行安装，官网网址
+
+注意安装Node.js会包含环境变量以及npm的安装，安装后输入如下指令检测是否安装成功
+
+```bash
+$ node -v
+```
+
+```bash
+$ npm -v
+```
+
+**安装Hexo**
+
+使用npm命令安装Hexo
+
+```bash
+$ npm install -g hexo-cli
+```
+
+如果安装时间过长，可能是由于镜像在国外的原因，可以先切换淘宝镜像，然后再执行npm安装Hexo命令
+
+```bash
+$ npm config set registry http://registry.npm.taobao.org
+$ npm install -g hexo-cli
+```
+
+如果是mac系统还可能遇到权限问题，需要开启root用户，然后使用root权限安装Hexo命令
+
+开启方法见[Mac官网](https://support.apple.com/zh-cn/HT204012)  
+
+```bash
+$ sudo npm install -g hexo-cli
+```
 
 ## 常用命令
 
 ##### 初始化博客
 
-​```bash
+```bash
 $ hexo init [博客文件夹名]
 ```
 
@@ -74,6 +80,8 @@ $ hexo generate
 $ hexo g //简写
 ```
 
+More info: [Generating](https://hexo.io/docs/generating.html)
+
 ##### 启动服务预览
 
 ```bash
@@ -90,17 +98,25 @@ $ hexo deploy
 $ hexo d //简写
 ```
 
+More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
+
 ##### 清除缓存
 
 ```bash
 $ hexo clean
 ```
 
+##### Run server
 
+``` bash
+$ hexo server
+```
+
+More info: [Server](https://hexo.io/docs/server.html)
 
 ## Hexo部署目录本地同步
 
-### 将hexo目录从本地计算机更新到github
+### 将hexo目录从本地更新到github
 
 #### 未上传到github过
 
@@ -139,7 +155,7 @@ $ git push origin hexo
 
 hexo clean后，目录内发生改变的只有你修改的博客文件，将其提交就好
 
-### 将hexo目录从github更新到本地计算机
+### 将hexo目录从github更新到本地
 
 #### 未下载hexo目录
 
@@ -167,41 +183,10 @@ hexo clean后，目录内发生改变的只有你修改的博客文件，将其�
 
 4. 之后可进行正常hexo操作，编写、部署博客
 
-
 #### 已下载hexo目录
 
+先切换到hexo分支，然后
 
-
-## Quick Start
-
-### Create a new post
-
-``` bash
-$ hexo new "My New Post"
+```bash
+$ git pull
 ```
-
-More info: [Writing](https://hexo.io/docs/writing.html)
-
-### Run server
-
-``` bash
-$ hexo server
-```
-
-More info: [Server](https://hexo.io/docs/server.html)
-
-### Generate static files
-
-``` bash
-$ hexo generate
-```
-
-More info: [Generating](https://hexo.io/docs/generating.html)
-
-### Deploy to remote sites
-
-``` bash
-$ hexo deploy
-```
-
-More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
